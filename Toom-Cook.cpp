@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
-#include<algorithm>
-#include<string.h>
+#include <algorithm>
+#include <string.h>
 using namespace std;
+
 int main(){
 	long long int a,s,g,h;
 	int d,a1,s1,cnt;
