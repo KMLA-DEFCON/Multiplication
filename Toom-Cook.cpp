@@ -5,24 +5,42 @@
 #include<string.h>
 using namespace std;
 int main(){
-	long long int a,s,g;
-	int d,a1,s1;
+	long long int a,s,g,h;
+	int d,a1,s1,cnt;
 	long long a2[3],s2[3],f,t1,t2;
 	long long a_0,a_1,a_m1,a_m2,a_inf;
 	long long s_0,s_1,s_m1,s_m2,s_inf;
 	long long r_0,r_1,r_m1,r_m2,r_inf;
 	long long r0,r1,r2,r3,r4;
 	cin >> a >> s;
-	a1=a/3;
-	s1=s/3;
+	
+	h=a;
+	cnt=0;
+	while(h>0){
+		h/=10;
+		cnt++;
+	}
+	a1=cnt/3;
+	
+	h=s;
+	cnt=0;
+	while(h>0){
+		h/=10;
+		cnt++;
+	}
+	s1=cnt/3;
+	
 	if(a1>s1){
 		d=a1+1;
 	}else{
 		d=s1+1;
 	}
+	
+	f=1;
 	for(int i=0;i<d;i++){
 		f*=10;
 	}
+	
 	for(int i=0;i<3;i++){
 		a2[i]=a%f;
 		a/=f;
@@ -61,5 +79,6 @@ int main(){
 	
 	g=r0+r1*f+r2*f*f+r3*f*f*f+r4*f*f*f*f;
 	cout << g;
+	
     return 0;
 }
