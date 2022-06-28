@@ -45,7 +45,7 @@ int main(){
 	for(int i=0;i<3;i++){
 		a2[i]=a%f;
 		a/=f;
-		s2[]=s%f;
+		s2[i]=s%f;
 		s/=f;
 	}
 	
