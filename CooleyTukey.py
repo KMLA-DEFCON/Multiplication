@@ -6,8 +6,8 @@ def fft(x):
     
     if N <= 1: return x
 
-    even = x[0::2]
-    odd  = x[1::2]
+    even = x[0:N//2:2]
+    odd  = x[1:N//2:2]
 
     even = fft(even)
     odd = fft(odd)
