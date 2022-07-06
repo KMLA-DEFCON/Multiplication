@@ -18,3 +18,5 @@ def fft(x):
 
     return x
 
+data = input().split()
+print(fft(data))
