@@ -1,7 +1,6 @@
 from cmath import exp,pi
 
 def fft(x):
-
     N = len(x)
     
     if N <= 1: return x
@@ -13,7 +12,7 @@ def fft(x):
     odd = fft(odd)
 
     for k in range(N//2):
-        x[k       ] = even[k] + exp(-2j*pi*k/N)*odd[k]
+        x[k] = even[k] + exp(-2j*pi*k/N)*odd[k]
         x[k + N//2] = even[k] - exp(-2j*pi*k/N)*odd[k]
 
     return x
