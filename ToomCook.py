@@ -29,11 +29,11 @@ def toomcook(A,B):
     q_m2 = 2*(q_m1 + b[2]) - b[0]
     q_inf = b[2]
 
-    r_0 = p_0 * q_0
-    r_1 = p_1 * q_1
-    r_m1 = p_m1 * q_m1
-    r_m2 = p_m2 * q_m2
-    r_inf = p_inf * q_inf
+    r_0 = toomcook(p_0 * q_0)
+    r_1 = toomcook(p_1 * q_1)
+    r_m1 = toomcook(p_m1 * q_m1)
+    r_m2 = toomcook(p_m2 * q_m2)
+    r_inf = toomcook(p_inf * q_inf)
 
     r = [0,0,0,0,0] # r(x) = r[4]x^4 + ... + r[0]
     r[0] = r_0
