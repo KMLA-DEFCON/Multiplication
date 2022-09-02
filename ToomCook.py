@@ -1,5 +1,8 @@
 def toomcook(A,B):
 
+    if A<10 or B<10:
+        return A*B
+        
     cut = max(len(str(A))//3, len(str(B))//3) + 1
     cut = 10**cut
 
