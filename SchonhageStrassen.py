@@ -12,7 +12,7 @@ def multiply(x,y):
             LC[i+j] += (y%10) * (x%10)
             x = x // 10
         y = y // 10
-    print(LC)
+
     sum, carry, base = 0, 0, 1
     for i in range(len(LC)):
         LC[i] += carry
@@ -21,7 +21,7 @@ def multiply(x,y):
         base *= 10
 
     sum += base * carry
-    print(LC)
+
     return sum
 
 a = int(input())
