@@ -1,4 +1,7 @@
-def multiply(x,y,n,m):
+def multiply(x,y):
+
+    n = len(str(x))
+    m = len(str(y))
 
     LC = [0 for _ in range(0,n+m-1)] #Linear Convolution of x*y
 
@@ -9,7 +12,7 @@ def multiply(x,y,n,m):
             LC[i+j] += (y%10) * (x%10)
             x = x // 10
         y = y // 10
-
+    print(LC)
     sum, carry, base = 0, 0, 1
     for i in range(len(LC)):
         LC[i] += carry
@@ -18,11 +21,9 @@ def multiply(x,y,n,m):
         base *= 10
 
     sum += base * carry
-
+    print(LC)
     return sum
 
 a = int(input())
 b = int(input())
-n = len(str(a))
-m = len(str(b))
-print(multiply(a,b,n,m))
+print(multiply(a,b))
